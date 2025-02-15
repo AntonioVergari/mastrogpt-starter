@@ -5,6 +5,7 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
     "markdown.marp.html": "all",
     "workspaceKeybindings": {
         "keybindings": [
