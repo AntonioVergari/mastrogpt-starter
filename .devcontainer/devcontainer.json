@@ -15,7 +15,8 @@
 				"marp-team.marp-vscode",
 				"ryuta46.multi-command",
 				"george-alisson.html-preview-vscode",
-				"mathematic.vscode-pdf"
+				"mathematic.vscode-pdf",
+				"LittleFoxTeam.vscode-python-test-adapter"
 			]
 		}
 	}
