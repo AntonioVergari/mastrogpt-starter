@@ -8,6 +8,7 @@ def unauthorized(args):
   
 def auth(args):
   print("Token:", args.get("token", "<none>"))
-  #if unauthorized(args):
-  #  return { "output": "you are not authenticated" }
-  return { "output": "you are authenticated" }
+  result =  unauthorized(args)
+  if result:
+    return { "output": "you are not authenticated" }
+  return args["authorized": True]
