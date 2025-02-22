@@ -5,4 +5,4 @@
 
 import auth
 def main(args):
-  return { "body": auth.auth(args) }
+  return  auth.auth(args) 
