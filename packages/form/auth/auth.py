@@ -1,6 +1,6 @@
 import os, redis
 
-def unauthorized(args):
+def check_auth(args):
   [user, secret] = args.get("token", "_:_").split(":")
   rd = redis.from_url(args.get("REDIS_URL", os.getenv("REDIS_URL")))
   check = rd.get(f"{args.get("REDIS_PREFIX", os.getenv("REDIS_PREFIX"))}TOKEN:{user}") or b''
@@ -8,7 +8,9 @@ def unauthorized(args):
   
 def auth(args):
   print("Token:", args.get("token", "<none>"))
-  result =  unauthorized(args)
+  result =  check_auth(args)
   if result:
-    return { "output": "you are not authenticated" }
-  return args["authorized": True]
+    args["authorized"] = False
+  else:
+    args["authorized"] = True
+  return args
