@@ -14,5 +14,9 @@
     {
         "name": "Puzzle",
         "url": "form/puzzle"
+    },
+    {
+        "name": "Auth-Sequence",
+        "url": "form/authsequence"
     }
 ]
